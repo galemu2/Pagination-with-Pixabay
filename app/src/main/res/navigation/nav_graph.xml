@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentPhotos">
+
+    <fragment
+        android:id="@+id/fragmentPhotos"
+        android:name="com.example.pagingapplication.ui.fragments.FragmentPhotos"
+        android:label="Photo List"
+        tools:layout="@layout/fragment_photos">
+        <action
+            android:id="@+id/action_fragmentPhotos_to_fragmentPhotoDetails"
+            app:destination="@id/fragmentPhotoDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPhotoDetails"
+        android:name="com.example.pagingapplication.ui.fragments.FragmentPhotoDetails"
+        android:label="Photo Details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="photos"
+            app:argType="com.example.pagingapplication.data.model.Hit" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPixaBayCredit"
+        android:name="com.example.pagingapplication.ui.fragments.FragmentPixaBayCredit"
+        android:label="Pixabay" />
+    <action
+        android:id="@+id/pixabay_credit"
+        app:destination="@id/fragmentPixaBayCredit" />
+</navigation>

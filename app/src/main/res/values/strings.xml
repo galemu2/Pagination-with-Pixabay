@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Paging Application</string>
+
+    <string name="pixabay_credit"><u>All images are obtained from Pixabay</u></string>
+</resources>
